@@ -1,0 +1,113 @@
+
+
+.studios {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+    display: grid;
+    gap: 10px;
+}
+
+.studio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 16px;
+    column-gap: 12px;
+    width: 320px;
+    background-color: black;
+    color: white; 
+    padding: 20px;
+    border-radius: 16px;  
+    font-family: 'Montserrat', sans-serif; 
+    text-align: left;
+}
+
+.studio * {
+    margin: 0;
+}
+
+.studio-description {
+    grid-column: 1 / -1;
+    text-align: left;
+}
+
+.studio-heading {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.studio-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.studio-logo {
+    filter: invert();
+    width: 40px;
+}
+
+.studio-images {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-rows: 80px;
+    gap: 12px;
+}
+
+.studio-image {
+    border-radius: 10px;
+}
+
+
+.call-to-action {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.name-and-availability {
+    text-align: left;
+}
+
+.studio-description {
+    font-size: 0.8rem;
+}
+
+.studio-name {
+    font-size: 1rem;
+}
+
+.studio-availability {
+    font-weight: 300;
+    font-size: 0.825rem;
+}
+
+.studio-comment {   
+    transform: rotateY(180deg); 
+    margin-right: 8px;   
+}
+
+
+@keyframes blinky {
+    to {
+        opacity: 0;
+    }
+}
+
+.blink {
+
+    display: inline-block;
+    background-color: yellowgreen;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    animation: blinky 1s infinite alternate;
+
+}
